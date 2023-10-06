@@ -16,6 +16,12 @@ public class studentStart {
 		obj.setAge(23);
 		obj.setEmail("ktanmay1130@gmail.com");
 		
+		student obj1 = new student();
+		obj1.setRollNo(2);
+		obj1.setName("gyandeep");
+		obj1.setAge(22);
+		obj1.setEmail("gyandeep@gmail.com");
+		
 
 		EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("Tanmay");
 		EntityManager entityManager = entityManagerFactory.createEntityManager();
@@ -23,6 +29,7 @@ public class studentStart {
 		
 		entiyTransaction.begin();
 		entityManager.persist(obj);
+		entityManager.persist(obj1);
 		entiyTransaction.commit();
 	}
 
